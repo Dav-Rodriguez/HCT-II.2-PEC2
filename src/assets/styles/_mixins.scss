@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "variables" as vars; // Importar variables
+
+@mixin responsive($size) {
+  @if map.has-key(vars.$breakpoints, $size) {
+    @media (min-width: map.get(vars.$breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @error "El breakpoint '#{$size}' no existe en $breakpoints.";
+  }
+}

@@ -5,3 +5,15 @@
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans:wght@400&display=swap");
+
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+//@import "@fortawesome/fontawesome-free/scss/fontawesome";
+//@import "@fortawesome/fontawesome-free/scss/solid";
+//@import "@fortawesome/fontawesome-free/scss/brands";
+
+// Importar Font Awesome (usando la ruta relativa a node_modules)
+@import "../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
