@@ -1,0 +1,125 @@
+@use "sass:color";
+@use "../variables" as vars;
+
+.recipe-page {
+  padding: 4rem 0;
+  background-color: vars.$background-color;
+}
+
+// RECETA DESTACADA
+.recipe-featured {
+  max-width: 1100px;
+  padding: 0 2rem;
+  margin: 0 auto 5rem;
+
+  &__title {
+    margin-bottom: 3rem;
+    font-family: vars.$font-heading;
+    color: vars.$primary-color;
+    text-align: center;
+  }
+}
+
+.recipe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+
+  &__ingredients {
+    flex: 1 1 350px;
+  }
+
+  &__steps {
+    flex: 2 1 500px;
+    line-height: 1.8;
+  }
+}
+
+// TABLA ESTILIZADA
+.ingredients-table {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 1rem;
+    text-align: left;
+    /*border-bottom: 1px solid $border-color;*/
+    $border-color: color.adjust(vars.$background-color, $lightness: -10%);
+  }
+
+  th {
+    color: white;
+    background-color: vars.$primary-color;
+  }
+
+  tr:hover {
+    background-color: rgba(vars.$primary-color, 0.05);
+  }
+}
+
+// FORMULARIO
+.recipe-submission {
+  padding: 5rem 2rem;
+  background-color: white;
+
+  .submission-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+      margin-bottom: 1rem;
+      font-family: vars.$font-heading;
+      color: vars.$secondary-color;
+    }
+  }
+}
+
+.recipe-form {
+  margin-top: 2rem;
+  text-align: left;
+
+  &__group {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      font-family: inherit;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+
+      &:focus {
+        outline: none;
+        border-color: vars.$accent-color;
+        box-shadow: 0 0 5px rgba(vars.$accent-color, 0.2);
+      }
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background-color: vars.$accent-color;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: vars.$primary-color;
+    }
+  }
+}

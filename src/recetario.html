@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <title>Recetario - Jornadas de Cocina</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main class="recipe-page">
+      <section class="recipe-featured" data-aos="fade-up">
+        <h1 class="recipe-featured__title">
+          Receta del Mes: Guiso de la Abuela
+        </h1>
+
+        <div class="recipe-grid">
+          <div class="recipe-grid__ingredients">
+            <h3>Ingredientes</h3>
+            <table class="ingredients-table">
+              <thead>
+                <tr>
+                  <th>Ingrediente</th>
+                  <th>Cantidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Patatas de la zona</td>
+                  <td>1 kg</td>
+                </tr>
+                <tr>
+                  <td>Carne de ternera</td>
+                  <td>500 g</td>
+                </tr>
+                <tr>
+                  <td>Pimiento rojo y verde</td>
+                  <td>2 unidades</td>
+                </tr>
+                <tr>
+                  <td>Azafrán en hebra</td>
+                  <td>Una pizca</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="recipe-grid__steps">
+            <h3>Preparación</h3>
+            <p>
+              Pelar las patatas, lavarlas y cortarlas en trozos medianos,
+              chascándolas para favorecer que el guiso espese. Cortar la carne
+              de ternera en dados y salpimentarla ligeramente. Lavar los
+              pimientos, retirar las semillas y trocearlos. En una olla amplia,
+              calentar un poco de aceite y dorar la carne a fuego medio hasta
+              que quede bien sellada. Añadir los pimientos y sofreírlos junto
+              con la carne durante unos minutos. Incorporar las patatas, mezclar
+              bien y cubrir con agua caliente hasta que los ingredientes queden
+              justo cubiertos. Añadir el azafrán y cocinar a fuego medio-bajo
+              durante unos 35–40 minutos, hasta que las patatas estén tiernas y
+              el caldo haya espesado. Rectificar de sal si es necesario y dejar
+              reposar unos minutos antes de servir.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="recipe-submission" data-aos="fade-up">
+        <div class="submission-container">
+          <h2 class="submission-container__title">Envíanos tu Receta</h2>
+          <p>Comparte tu legado culinario con nuestra comunidad.</p>
+
+          <form class="recipe-form">
+            <div class="recipe-form__group">
+              <label for="recipe-name">Nombre de la Receta</label>
+              <input
+                type="text"
+                id="recipe-name"
+                name="recipe-name"
+                placeholder="Ej. Gazpacho andaluz"
+                required
+              />
+            </div>
+
+            <div class="recipe-form__group">
+              <label for="recipe-category">Categoría</label>
+              <select id="recipe-category" name="recipe-category">
+                <option value="tradicional">Tradicional</option>
+                <option value="mar">Mariscos</option>
+                <option value="reposteria">Repostería</option>
+              </select>
+            </div>
+
+            <div class="recipe-form__group">
+              <label for="recipe-msg">Tu secreto (comentarios)</label>
+              <textarea id="recipe-msg" name="recipe-msg" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="recipe-form__submit">
+              Enviar Receta
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/contact.html"></include>
+    <include src="./views/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>
