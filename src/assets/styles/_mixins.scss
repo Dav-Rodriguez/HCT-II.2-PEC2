@@ -1,9 +1,12 @@
 @use "sass:map";
-@use "variables" as vars; // Importar variables
+@use "variables" as vars;
 
 @mixin responsive($size) {
   @if map.has-key(vars.$breakpoints, $size) {
-    @media (min-width: map.get(vars.$breakpoints, $size)) {
+    $breakpoint-value: map.get(vars.$breakpoints, $size);
+
+    // stylelint-disable-next-line media-query-no-invalid
+    @media (min-width: #{$breakpoint-value}) {
       @content;
     }
   } @else {
