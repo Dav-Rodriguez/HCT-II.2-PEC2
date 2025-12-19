@@ -1,0 +1,85 @@
+@use "../variables" as vars;
+
+.participants-page {
+  padding: 4rem 2rem;
+  background-color: vars.$background-color;
+}
+
+.intro {
+  margin-bottom: 3rem;
+  text-align: center;
+
+  &__title {
+    font-family: vars.$font-heading;
+    font-size: 2.5rem;
+    color: vars.$primary-color;
+  }
+}
+
+// CONTENEDOR FLEX
+.speakers {
+  display: flex;
+  flex-wrap: wrap; // Permite que las tarjetas bajen a la siguiente fila
+  gap: 2rem; // Espacio entre tarjetas
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// LA TARJETA (Speaker Card)
+.speaker-card {
+  flex: 1 1 280px; // Flex-grow: 1, Flex-shrink: 1, Base: 280px
+  max-width: 350px; // Para que no crezcan demasiado en pantallas grandes
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  &__image-wrapper {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  &__name {
+    margin-bottom: 0.5rem;
+    font-family: vars.$font-heading;
+    color: vars.$text-color;
+  }
+
+  &__specialty {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: vars.$secondary-color;
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    a {
+      font-size: 1.2rem;
+      color: vars.$accent-color;
+      &:hover {
+        color: vars.$primary-color;
+      }
+    }
+  }
+}
