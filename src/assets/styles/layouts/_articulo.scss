@@ -1,0 +1,130 @@
+@use "sass:color"; // Para usar color.adjust
+@use "../variables" as vars;
+
+.article-page {
+  background-color: vars.$background-color;
+}
+
+// FRANJA B: HERO
+.article-hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: rgba(vars.$primary-color, 0.05);
+
+  &__image-container {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  &__title {
+    font-family: vars.$font-heading;
+    font-size: 2.5rem;
+    color: vars.$primary-color;
+  }
+}
+
+// FRANJA C: CONTENIDO
+.article-content {
+  max-width: 900px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+
+  .article-intro {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    &__quote {
+      flex: 1;
+      padding-left: 1rem;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: vars.$secondary-color;
+      border-left: 4px solid vars.$accent-color;
+    }
+
+    &__text {
+      flex: 2;
+      font-size: 1rem;
+    }
+  }
+
+  .styled-list {
+    padding: 2rem 0;
+    list-style: none;
+    counter-reset: my-counter;
+
+    &__item {
+      position: relative;
+      padding-left: 4rem;
+      margin-bottom: 2rem;
+      counter-increment: my-counter;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        font-weight: bold;
+        color: white;
+        content: counter(my-counter);
+        background-color: vars.$primary-color;
+        border-radius: 50%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 0.5rem;
+      font-family: vars.$font-heading;
+    }
+  }
+
+  .article-full-img {
+    position: relative;
+    right: 50%;
+    left: 50%;
+    width: 100vw;
+    margin-top: 3rem;
+    margin-right: -50vw;
+    margin-bottom: 3rem;
+    margin-left: -50vw;
+
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    figcaption {
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: vars.$secondary-color;
+      text-align: center;
+    }
+  }
+
+  // RESTRICCIÓN TÉCNICA: :is() / :where()
+  :is(.article-footer-text p, .styled-list__desc) {
+    line-height: 1.6;
+    color: color.adjust(vars.$text-color, $lightness: 10%);
+  }
+
+  // RESTRICCIÓN TÉCNICA: :has()
+  .article-body-section:has(.featured-note) {
+    padding: 2rem;
+    background-color: white;
+    border-top: 3px solid vars.$accent-color;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+}

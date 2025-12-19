@@ -19,8 +19,8 @@
 // CONTENEDOR FLEX
 .speakers {
   display: flex;
-  flex-wrap: wrap; // Permite que las tarjetas bajen a la siguiente fila
-  gap: 2rem; // Espacio entre tarjetas
+  flex-wrap: wrap;
+  gap: 2rem;
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -28,8 +28,8 @@
 
 // LA TARJETA (Speaker Card)
 .speaker-card {
-  flex: 1 1 280px; // Flex-grow: 1, Flex-shrink: 1, Base: 280px
-  max-width: 350px; // Para que no crezcan demasiado en pantallas grandes
+  flex: 1 1 280px;
+  max-width: 350px;
   overflow: hidden;
   background-color: #ffffff;
   border-radius: 12px;

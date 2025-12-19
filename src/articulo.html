@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <title>Blog - La Cocina de Siempre</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main class="article-page">
+      <section class="article-hero">
+        <div class="article-hero__image-container">
+          <img
+            src="./assets/images/hero.webp"
+            alt="Imagen del blog"
+            class="article-hero__img"
+          />
+        </div>
+        <h2 class="article-hero__title">
+          El Secreto del Fogón: Más que Simples Ingredientes
+        </h2>
+        <span class="article-hero__author">Por: David Rodríguez</span>
+      </section>
+
+      <section class="article-content">
+        <div class="article-intro">
+          <div class="article-intro__quote">
+            "La cocina es el lenguaje que todos entendemos, pero pocos dominan
+            con el corazón."
+          </div>
+          <div class="article-intro__text">
+            <p>
+              En el mundo actual, hemos olvidado que cocinar es un acto de
+              paciencia. Los procesos industriales han reemplazado el aroma del
+              sofrito lento y el reposo necesario de las masas.
+            </p>
+          </div>
+        </div>
+
+        <div class="article-list-section">
+          <hr class="article-divider" />
+          <ol class="styled-list">
+            <li class="styled-list__item">
+              <h4 class="styled-list__title">La Calidad del Producto</h4>
+              <p class="styled-list__desc">
+                No hay buena cocina sin una materia prima respetada desde su
+                origen.
+              </p>
+            </li>
+            <li class="styled-list__item">
+              <h4 class="styled-list__title">El Manejo del Tiempo</h4>
+              <p class="styled-list__desc">
+                El fuego debe ser un aliado, no un enemigo que busca la rapidez.
+              </p>
+            </li>
+            <li class="styled-list__item">
+              <h4 class="styled-list__title">La Memoria Gustativa</h4>
+              <p class="styled-list__desc">
+                Cada plato debe contar una historia que nos devuelva a nuestras
+                raíces.
+              </p>
+            </li>
+          </ol>
+          <hr class="article-divider" />
+        </div>
+
+        <div class="article-body-section">
+          <div class="featured-note">
+            <p>
+              Nota importante: La técnica se aprende, pero la pasión se hereda.
+            </p>
+          </div>
+          <p>
+            Explorar estas tres claves nos permite entender por qué ciertas
+            recetas han sobrevivido siglos sin cambiar una sola coma de su
+            ejecución.
+          </p>
+        </div>
+
+        <figure class="article-full-img">
+          <img src="./assets/images/hero.webp" alt="Técnicas culinarias" />
+          <figcaption>
+            Vista detallada de una cocina tradicional en pleno funcionamiento.
+          </figcaption>
+        </figure>
+
+        <div class="article-footer-text">
+          <p>
+            Finalmente, cocinar es un acto de amor hacia los demás y hacia
+            nosotros mismos.
+          </p>
+          <p>
+            Esperamos que este recorrido por la tradición te inspire a encender
+            el fogón hoy mismo.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/contact.html"></include>
+    <include src="./views/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>
