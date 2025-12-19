@@ -3,37 +3,89 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>UOC Boilerplate - Jornadas de Cocina</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source
-          srcset="./assets/images/logo.png?as=webp&width=350"
-          type="image/webp"
-        />
-        <img
-          src="./assets/images/logo.png?width=350"
-          alt="Universitat Oberta de Catalunya"
-          class="uoc-logo"
-        />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya. hIIIII
-      </p>
+    <header class="header container-fluid">
+      <div
+        class="header__container d-flex justify-content-between align-items-center py-3"
+      >
+        <div class="header__logo">
+          <a class="nav-link" href="./index.html">
+            <img
+              src="./assets/images/logo.png"
+              alt="Logo Jornadas"
+              width="150"
+            />
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./views/participantes.html">Ponentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./views/articulo.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./views/recetario.html">Recetas</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-      <i class="fas fa-check-circle"></i>
-      <i class="fab fa-github"></i>
-      <i class="fas fa-check-circle"></i>
-      <i class="fab fa-github"></i>
-    </div>
+    <main class="home-grid">
+      <section class="franja franja-a">
+        <div class="hero" data-aos="fade-up">
+          <div class="hero__image-container">
+            <img
+              src="./assets/images/hero.webp"
+              alt="Hero Cocina"
+              class="hero__img"
+            />
+          </div>
+          <h2 class="hero__slogan">Tradición en cada bocado</h2>
+          <p class="hero__description">
+            Descubre la esencia de nuestra gastronomía a través de los sentidos
+            y la historia.
+          </p>
+        </div>
+      </section>
+
+      <section class="franja franja-b">
+        <div class="contact-section">
+          <p class="contact-section__text">
+            ¿Tienes alguna duda? Escríbenos a
+            <strong>info@jornadascocina.es</strong>
+          </p>
+        </div>
+
+        <hr class="separator" />
+
+        <div
+          class="nav-bottom d-flex justify-content-between align-items-center w-100 px-4"
+        >
+          <div class="nav-bottom__brand">
+            <img src="./assets/images/logo.png" alt="Logo" width="150" />
+          </div>
+          <nav class="nav-bottom__links">
+            <a href="./views/participantes.html" class="px-2">Ponentes</a>
+            <a href="./views/articulo.html" class="px-2">Blog</a>
+            <a href="./views/recetario.html" class="px-2">Recetas</a>
+          </nav>
+          <div class="nav-bottom__social">
+            <a href="#"><i class="fab fa-google-plus-g px-2"></i></a>
+            <a href="#"><i class="fab fa-facebook-f px-2"></i></a>
+            <a href="#"><i class="fab fa-x-twitter px-2"></i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->
